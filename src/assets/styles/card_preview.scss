@@ -1,0 +1,210 @@
+@import './colors.scss';
+@import './media_queries.scss';
+
+.card_preview_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include mobile {
+        width: 18rem; 
+        height: 26.18rem; 
+    }
+    @include tablet {
+      width: 21.37rem;
+      height: 28.125rem; 
+    }
+    @include laptop {
+        width: 23rem;
+        height: 32.75rem; 
+    }
+    @include large {
+       width: 31rem;
+       height: 37.25rem; 
+    }
+    @include extra_l {
+        width: 49rem;
+        height: 27.9rem; 
+
+    }
+    
+    .card_preview_wrapper {
+        display: flex;
+        background-color: $secondary_bg;
+        border-radius: 0.9375rem;
+
+        @include mobile {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;   
+            height: 22.43rem;
+        }
+
+        @include tablet {
+            width: 100%;
+            flex-direction: column;
+            gap: 2.5rem; 
+            height: 24.37rem;
+        }
+        @include laptop {
+            width: 100%;
+            flex-direction: column;
+            gap: 2.5rem;
+            height: 29rem;
+        }
+        @include large {
+            width: 100%;
+            flex-direction: column;
+            gap: 2.5rem;
+            height: 33.5rem;
+            align-items: flex-start;
+            padding-left: 2.5rem;
+        }
+        @include extra_l {
+            width: 100%;
+            height: 24.6rem;
+            gap: 2rem;
+            flex-direction: row;
+            padding: 0;
+            align-items: flex-start;
+        }
+        .img_item {
+            position: relative;
+
+            @include mobile {
+                    height: 100%;  
+                }
+                @include tablet {
+                    height: 100%;
+                }
+                @include extra_l {
+                    width: 21.5rem;
+                }
+
+            & img {
+                @include mobile {
+                    width: 10.6rem;
+                    height: 14.8rem;
+                    position: absolute;
+                    bottom: -0.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    
+                }
+                @include tablet {
+                    width: 12.5rem;
+                    height: 16.6rem;
+                    bottom: -0.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                @include laptop {
+                    width: 15.25rem;
+                    height: 20.5rem;
+                    bottom: -0.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                @include large {
+                    width: 18.75rem;
+                    height: 25rem;
+                    transform: none;
+                }
+                @include extra_l {
+                    width: 18.75rem;
+                    height: 25rem;
+                    margin-left: 2.5rem;
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 0;
+                    transform: none;
+                }
+            }
+        }
+
+        .text_item {
+            
+           h1 {
+            @include mobile {
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+                margin-top: 0;
+            }
+            @include tablet {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                margin-top: 0;
+            }
+            @include laptop {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                margin-top: 0;
+            }
+            @include large {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                margin-top: 0;
+            }
+            @include extra_l {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                margin-top: 2.5rem;
+            }
+           }
+
+           button {
+            background-color: $btn_default;
+            border: none;
+            color: $primary_font_color;
+            border-radius: 0.9375rem;
+            cursor: pointer;
+             
+            &:hover {
+                background-color: $btn_hover;
+                transition: 0.5s all ease-in-out;
+            }
+
+            @include mobile {
+                width: 10.6rem;
+                height: 2.6rem;
+                font-size: 0.875rem;
+                font-weight: 300;
+                margin-bottom: 4.13rem;
+            }
+            @include tablet {
+                width: 12.5rem;
+                height: 3rem;
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom: 2.25rem;
+            }
+            @include laptop {
+                width: 12.5rem;
+                height: 3rem;
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom: 3rem;
+            }
+            @include large {
+                width: 12.5rem;
+                height: 3rem;
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom: 3rem;
+            }
+            @include extra_l {
+               width: 12.5rem;
+               height: 3rem;
+               font-size: 1rem;
+               font-weight: 500;
+            }
+           }
+        }
+
+    }
+}

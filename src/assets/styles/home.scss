@@ -1,0 +1,149 @@
+@import './colors.scss';
+@import './media_queries.scss';
+
+.main_wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+        width: 18.06rem;
+        gap: 2.25rem;
+    }
+
+    @include tablet {
+        width: 44rem;
+        gap: 3rem;
+    }
+    @include laptop {
+        width: 49rem;
+        gap: 3rem;
+    }
+    @include large {
+        width: 65rem;
+        gap: 3rem;
+    }
+    @include extra_l {
+        width: 100rem;
+        gap: 4.5rem;
+    }
+
+    .page_info {
+        display: flex;
+        justify-content: space-between;
+
+        .page_name {
+            @include mobile {
+                font-size: 1.25rem;
+                font-weight: 600;
+            }
+            @include tablet {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            @include laptop {
+                font-size: 2.25rem;
+                font-weight: 800;
+            }
+            @include large {
+                font-size: 2.25rem;
+                font-weight: 800;
+            }
+            @include extra_l {
+                font-size: 2.25rem;
+                font-weight: 800;
+            }
+        }
+
+        .search_input {
+
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+            @include laptop {
+                position: relative;
+                display: block;
+                width: 14.7rem;
+            }
+            @include large {
+                position: relative;
+                display: block;
+                width: 14.7rem;
+            }
+            @include extra_l {
+                position: relative;
+                display: block;
+                width: 19.5rem;
+            }
+
+            .search_btn {
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                position: absolute;
+                left: 0.5rem;
+                top: calc(50% - 1.1rem);
+                cursor: pointer;
+
+                /*@include laptop {
+                   position: absolute;
+                   left: 0.5rem;
+                }
+                @include large {
+                    position: absolute;
+                    left: 0.5rem;
+                    
+                }
+                @include extra_l {
+                    position: absolute;
+                    left: 0.5rem;
+                }*/
+            }
+
+            input {
+                background: transparent;
+                border-radius: 0.375rem;
+                border: 1px solid $inputs_font_color;
+                padding: 0.5rem 0rem 0.5rem 3rem;
+                @include laptop {
+                    width: 100%;
+                }
+                @include large {
+                    width: 100%;
+                }
+                @include extra_l {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .main_content {
+        display: grid;
+        width: 100%;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        @include large {
+            grid-template-columns: repeat(2, 1fr);
+            gap-: 0rem;
+        }
+        @include extra_l {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    }
+}

@@ -1,0 +1,312 @@
+@import './colors.scss';
+@import './media_queries.scss';
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include mobile {
+        margin-bottom: 3rem;
+    }
+
+    @include tablet {
+        margin-bottom: 4rem;
+    }
+    @include laptop {
+        margin-bottom: 4rem;
+    }
+    @include large {
+        margin-bottom: 4rem;
+    }
+    @include extra_l {
+        margin-bottom: 5rem;
+    }
+
+    .navbar {
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.9375rem;
+        border: 1px solid $inputs_font_color;
+        
+        @include mobile {
+            min-width: 18.06rem;
+            height: 3rem;
+        }
+
+        @include tablet {
+            width: 44rem;
+            height: 3rem;
+        }
+        @include laptop {
+            width: 49rem;
+            height: 3rem;
+        }
+        @include large {
+            width: 65rem;
+            height: 4rem;
+        }
+        @include extra_l {
+            width: 100rem;
+            height: 5.5rem;
+        }
+
+        .logo {
+            margin: 0.25rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+
+            @include mobile {
+                width: 6rem;
+                height: 2.5rem;
+            }
+            @include tablet {
+                width: 6rem;
+                height: 2.5rem;
+            }
+            @include laptop{
+               height: 2.5rem;
+            }
+            @include large{
+               width: 8.8rem;
+               height: 3.5rem;
+            }
+            @include extra_l{
+                width: 10.25rem;
+                height: 5rem;
+            }
+
+        }
+        
+        nav {
+            margin: 0.25rem;
+            display: flex;
+            gap: 0.25rem;
+            align-items: center;
+        }
+
+        .mobile_menu{
+            border-radius: 0.6875rem;
+            border: 1px solid $nav_item_border;     
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+
+            @include mobile {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+            @include tablet {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+                font-weight: 600;
+            }
+
+            @include laptop{
+                display: none;
+           
+            }
+            @include large{
+                display: none;
+          
+            }
+            @include extra_l{
+                display: none;
+         
+            }
+
+            .menu {
+                @include mobile {
+                   display: none;
+                }
+                @include tablet {
+                   display: block;
+                   width: 5.5rem;
+                   text-align: center;
+                }
+            }
+        }
+        
+        .nav_menu{
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+            @include laptop{
+                display: flex;
+                gap: 0.25rem;
+            }
+            @include large{
+                display: flex;
+                gap: 0.25rem;
+            }
+            @include extra_l{
+                display: flex;
+                gap: 0.25rem;
+            }
+
+        }
+
+        .nav_menu  li{
+            border-radius: 0.6875rem;
+            border: 1px solid $nav_item_border;     
+            display: flex;
+            align-items: center;
+            justify-content: center;   
+            padding: 0;
+            @include laptop{
+
+                padding: 0.5rem 1rem;
+
+            }
+            @include large{
+                
+                padding: 1rem 1.5rem;
+
+            }
+            @include extra_l{
+
+                padding: 1.75rem 3rem;
+
+            }
+        }
+        
+        .nav_item{
+            color: $primary_font_color;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include laptop{
+                font-size: 1rem;
+                width: 5.5rem;
+                height: 1.5rem;
+            }
+            @include large{
+                font-size: 1rem;
+                width: 5.5rem;
+                height: 1.5rem;
+            }
+            @include extra_l{
+                font-size: 1.25rem;
+                width: 5.5rem;
+                height: 1.5rem;
+            }
+        }
+        .favorites {
+            background: none;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            border-radius: 0.68rem;
+            border: 1px solid $nav_item_border;
+
+            @include mobile{
+                padding: 0.5rem 2rem 0.5rem 2rem;
+            }
+            @include laptop{
+                padding: 0.5rem 2rem 0.5rem 2rem;
+            }
+            @include large{
+                padding: 1rem 3rem;
+            }
+            @include extra_l{
+                padding: 1.75rem 3rem;
+            }
+
+        }
+        
+        .favorites img {
+            height: 24px;
+            width: 24px;
+        }
+    
+    }
+
+    .bread_crumbs {
+        @include mobile {
+            width: 18.06rem;
+        }
+
+        @include tablet {
+            width: 44rem;
+        }
+        @include laptop {
+            width: 49rem;
+        }
+        @include large {
+            width: 65rem;
+        }
+        @include extra_l {
+            width: 100rem;
+        }
+
+        .page {
+            @include mobile {
+                font-size: 0.875rem;
+                font-weight: 300;
+            }
+    
+            @include tablet {
+                font-size: 0.875rem;
+                font-weight: 300;
+            }
+                
+            @include laptop {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+            @include large {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+            @include extra_l {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+
+        .content {
+            @include mobile {
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+    
+            @include tablet {
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+                
+            @include laptop {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            @include large {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            @include extra_l {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+    
+   
+}    
+

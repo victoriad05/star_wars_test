@@ -1,0 +1,301 @@
+@import './colors.scss';
+@import './media_queries.scss';
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    @include tablet {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
+    @include laptop {
+       margin-top: 4rem;
+       margin-bottom: 1rem;
+    }
+    @include large {
+       margin-top: 4rem;
+       margin-bottom: 1rem;
+    }
+    @include extra_l {
+        margin-top: 5rem;
+        margin-bottom: 2.26rem;
+    }
+
+    .footer_wrapper {
+        padding: 0rem;
+       
+        .footer_content {
+            display: flex;
+            align-items: flex-start;
+            background: $secondary_bg;
+            border-radius: 0.9375rem;
+    
+            @include mobile {
+                width: 18.06rem;
+                gap: 2.25rem;
+                flex-direction: column;
+                align-items: center;
+                padding: 1.5rem;
+            }
+    
+            @include tablet {
+                width: 44rem;
+                height: 10.5rem;
+                padding: 1.5rem;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+            @include laptop {
+                width: 49rem;
+                height: 11.5rem;
+                padding: 1.5rem 4.5rem 2.25rem 1.5rem;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+            @include large {
+                width: 65rem;
+                height: 11.5rem;
+                padding: 1.5rem 6.12rem 2.25rem 1.5rem;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+            @include extra_l {
+                width: 100rem;
+                height: 12.5rem;
+                padding: 1.5rem 10rem 2.25rem 1.5rem;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+    
+            .navigation {
+                justify-content: space-between;
+                gap: 2.25rem;
+    
+                @include mobile {
+                    display: none;
+                }
+                @include tablet {
+                    display: flex;
+                 }
+                 @include laptop {
+                    display: flex;
+                 }
+                 @include large {
+                    display: flex;
+                 }
+                 @include extra_l {
+                    display: flex;
+                 }
+    
+                &_item{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    @include tablet {
+                        gap: 0.5rem;
+                     }
+                     @include laptop {
+                        gap: 0.75rem;
+                     }
+                     @include large {
+                        gap: 0.75rem;
+                     }
+                     @include extra_l {
+                        gap: 1rem;
+                     }
+    
+                    .nav_title {
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
+    
+                    .nav_link {
+                        font-size: 1rem;
+                        font-weight: 300;
+                        text-decoration: none;
+                        color: $primary_font_color;
+                        cursor: pointer;
+                    }
+                }
+            }
+    
+            .navigation_mobile {
+                width: 100%;
+    
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                }
+        
+                @include tablet {
+                   display: none;
+                }
+                @include laptop {
+                    display: none;
+                }
+                @include large {
+                    display: none;
+                }
+                @include extra_l {
+                    display: none;
+                }
+    
+                .dropdown {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+                    
+                    & button {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        background: transparent;
+                        border: none;
+                        font-size: 1rem;
+                        padding: 0;
+                        color: $primary_font_color;
+                        font-weight: 500;
+    
+                        .rotate-arrow {
+                            transform: rotate(180deg);
+                        }
+                    }  
+    
+                    &_menu {
+                        width: 100%;
+                        padding-left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+                        li  a{
+                            color: $primary_font_color;
+                            text-decoration: none;
+                            font-size: 0.875rem;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+    
+            .subscribtion {
+                &_title {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+    
+                    @include extra_l {
+                        font-size: 1.25rem;
+                    }
+                }
+    
+                &_subtitle {
+                    font-size: 1rem;
+                    font-weight: 300;
+                    margin-bottom: 0.75rem;
+    
+                    @include mobile {
+                        font-size: 0.875rem;
+                    }
+            
+                    @include tablet {
+                        font-size: 0.875rem;
+                    }
+                    @include laptop {
+                        font-size: 1rem;
+                    }
+                    @include large {
+                        font-size: 1rem;
+                    }
+                    @include extra_l {
+                        font-size: 1rem;
+                    }
+                }
+                
+                &_form {
+                    position: relative;
+    
+                     input {
+                        background: transparent;
+                        border: 1px solid $inputs_font_color;
+                        padding: 0.5rem;
+                        border-radius: 0.375rem;
+                    
+                        @include mobile {
+                            width: 12.5rem;
+                        }
+                
+                        @include tablet {
+                            width: 12.5rem;
+                        }
+                        @include laptop {
+                            width: 12.5rem;
+                        }
+                        @include large {
+                            width: 17.18rem;
+                        }
+                        @include extra_l {
+                            width: 17.18rem;
+                        }
+                    }
+    
+                    button {
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        background: $btn_default;
+                        border: none;
+                        border-radius: 0.38rem;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $btn_hover;
+                            transition: 0.5s all ease-in-out;
+                        }
+
+    
+                        @include mobile {
+                            top: 0.3rem; 
+                            right: 3rem;
+                        }
+                
+                        @include tablet {
+                            top: 0.3rem; 
+                            right: 2.5rem;
+                        }
+                        @include laptop {
+                            top: 0.3rem; 
+                            right: 4.5rem;
+                        }
+                        @include large {
+                            top: 0.3rem; 
+                            right: 2.02rem;
+                        }
+                        @include extra_l {
+                            top: 0.3rem; 
+                            right: 2rem;
+                        }
+                    }  
+                }
+    
+            }
+    
+        }
+    }
+}
