@@ -1,19 +1,7 @@
-# star_wars
+# Star Wars Test Project
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+In this project I've realized:
+- Responsive Styling according to the Figma mockups
+- Pagination
+- Routing
+- Work with API
