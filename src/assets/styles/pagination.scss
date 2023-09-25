@@ -1,0 +1,74 @@
+@import './colors.scss';
+@import './media_queries.scss';
+
+.pagination {
+    text-align: center;
+    height: 1.5rem;
+    @include mobile {
+        display: none;
+    }
+
+    @include tablet {
+       display: block;
+    }
+    @include laptop {
+        display: block;
+    }
+    @include large {
+        display: block;
+    }
+    @include extra_l {
+        display: block;
+    }
+  
+    ul {
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary_font_color;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .number {
+        padding: 0.12rem 0.4rem;
+        border-radius: 0.38rem;
+    }
+  
+    .number.active {
+        border-radius: 4px;
+        background: $btn_default;
+        color: $primary_font_color;
+    }
+
+    .number:hover {
+        background-color: $btn_hover;
+        border-radius: 4px;
+        transition: 0.5 all ease-in-out;
+    }
+
+  .btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .btn.disabled path {
+        fill: gray;
+        }
+
+    }
+
+}
+
+
