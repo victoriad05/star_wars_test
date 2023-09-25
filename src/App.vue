@@ -1,6 +1,5 @@
 <template>
   <Header />
-  <!-- <Card /> -->
   <router-view/>
   <Footer />
 </template>
