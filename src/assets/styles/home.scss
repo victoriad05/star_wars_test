@@ -120,6 +120,32 @@
         }
     }
 
+    .loader {
+        min-height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include mobile {
+            min-height: 100px;
+        }
+
+        @include tablet {
+            min-height: 200px;
+        }
+        @include laptop {
+            min-height: 160px;
+        }
+        @include large {
+           min-height: 100px;
+        }
+        @include extra_l {
+            min-height: 200px;
+        }
+    }
+
     .main_content {
         display: grid;
         width: 100%;

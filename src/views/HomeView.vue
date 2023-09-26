@@ -8,7 +8,11 @@
           <input type="text" class="search" placeholder="Search character...">
         </div>
       </div>
-      <div class="main_content">
+      <div v-if="isLoading" class="loader">
+        <Loader />
+        Loading...
+      </div>
+      <div class="main_content" v-if="shouldShowMainContent">
         <CardPreview
           v-for="(character, index) in displayedCharacters" 
           :key="createKey(character)" 
@@ -40,6 +44,8 @@ import MainContainer from '../components/MainContainer.vue';
 import CardPreview from '../components/CardPreview.vue'
 import Card from '../components/Card.vue';
 import Pagination from '@/components/Pagination.vue';
+import Loader from '@/components/Loader.vue';
+
 
 const mobileBreakpoint = 767;
 
@@ -48,7 +54,8 @@ export default {
     MainContainer,
     CardPreview,
     Card,
-    Pagination
+    Pagination,
+    Loader
   },
   data() {
     return {
@@ -58,11 +65,16 @@ export default {
       itemsPerPage: 4,
       currentPage: 1,
       isMobile: false,
+      isLoading: true,
+      loadedPages: 0,
     };
   },
 
   mounted() {
-    this.fetchCharacters()
+    // this.fetchCharacters()
+    this.fetchCharacters().then(() => {
+      this.isLoading = false;
+    });
     window.addEventListener('resize', this.updateIsMobile);
     this.updateIsMobile();
   },
@@ -76,6 +88,10 @@ export default {
       const endIndex = startIndex + this.itemsPerPage;
       return this.isMobile ? this.characters : this.characters.slice(startIndex, endIndex);
     },
+
+    shouldShowMainContent() {
+      return this.characters.length >= 11 && !this.isLoading;
+    },
   },
 
   
@@ -88,6 +104,7 @@ export default {
         const data = await response.json();
         this.characters.push(...data.results);
         nextUrl = data.next;
+        this.loadedPages++;
       }
     },
 
